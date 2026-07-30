@@ -12,9 +12,43 @@ Tampermonkey userscript for [new Reddit](https://www.reddit.com) (`shreddit-*` U
 
 ## Install
 
-1. Install [Tampermonkey](https://www.tampermonkey.net/) (Firefox, Chrome, etc.)
-2. Create a new script and paste the contents of [`Reddit-Image-Handler.user.js`](Reddit-Image-Handler.user.js), or install from a raw GitHub URL once published
-3. Visit any `https://*.reddit.com/*` page
+You need [Tampermonkey](https://www.tampermonkey.net/) first:
+
+- **Firefox:** [Add-ons page](https://addons.mozilla.org/firefox/addon/tampermonkey/)
+- **Chrome / Edge / Brave:** [Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+
+Then install **Reddit Image Handler** using either method below.
+
+### Method 1 — Install from URL (easiest)
+
+1. Open Tampermonkey → **Dashboard**
+2. Click the **+** tab (or **Utilities** → **Install from URL…**)
+3. Paste this URL and confirm install:
+
+   ```
+   https://raw.githubusercontent.com/danelovu/reddit-image-handler/master/Reddit-Image-Handler.user.js
+   ```
+
+4. Tampermonkey should show **Reddit Image Zoomer** — click **Install**
+
+### Method 2 — Copy the script manually
+
+1. Open [`Reddit-Image-Handler.user.js`](Reddit-Image-Handler.user.js) on GitHub (click **Raw** for the full file)
+2. Copy the entire file contents
+3. Tampermonkey → **Create a new script…**
+4. Select all default template text, paste, and **Save** (Ctrl+S)
+
+### Verify it works
+
+1. Go to any Reddit post with an image, e.g. a subreddit feed or comment page
+2. Click an image to open the lightbox
+3. You should see **+ / − / 100%** controls on the right and scroll-wheel zoom should work
+
+If the script does not run, check Tampermonkey’s icon — ensure the script is **enabled** for `reddit.com` and that Tampermonkey itself is allowed on the site (some browsers block extensions in private windows).
+
+### Updating
+
+When a new version is pushed to GitHub, Tampermonkey may prompt you to update. You can also reinstall from the URL above or use **Dashboard** → script → **Check for userscript updates** (if enabled in Tampermonkey settings).
 
 ## Usage
 
